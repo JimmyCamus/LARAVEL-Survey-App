@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 });
+
+Route::get("/login", function () {
+  return view('welcome');
+})->where('any', '.*');
+
+Route::get("/register", function () {
+  return view('welcome');
+})->where('any', '.*');
