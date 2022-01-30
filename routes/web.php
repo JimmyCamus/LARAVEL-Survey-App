@@ -24,3 +24,11 @@ Route::get("/login", function () {
 Route::get("/register", function () {
   return view('welcome');
 })->where('any', '.*');
+
+Route::get("/createSurvey", function () {
+  return view('welcome');
+})->where('any', '.*');
+
+Route::get("/mySurveys", function () {
+  return view('welcome');
+})->where('any', '.*');

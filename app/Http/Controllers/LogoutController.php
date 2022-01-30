@@ -10,7 +10,7 @@ class LogoutController extends Controller
   {
     if (!Auth::check()) {
       return response()->json([
-        "status" => "success",
+        "status" => "failed",
         "data" => "B",
       ]);
     }

@@ -7,14 +7,16 @@ const Layout = ({ children, user, setUser }) => {
   return (
     <div>
       <Navbar user={user} setUser={setUser} />
-      <Box>
+      <Box
+        sx={{minWidth: "100%"}}
+      >
         <Grid
           container
           spacing={0}
           direction="column"
           alignItems="center"
-          justifyContent="center"
-          style={{ minHeight: "50vh" }}
+          justifyContent="flex-start"
+          style={{ minHeight: "50vh", marginTop: "25px", marginBottom: "25px",minWidth: "100%" }}
         >
           {children}
         </Grid>

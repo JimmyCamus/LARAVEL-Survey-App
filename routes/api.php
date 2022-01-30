@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CreateSurveyController;
+use App\Http\Controllers\GetSurveysController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -19,9 +21,11 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get("getuser", [GetUserController::class, "getUser"]);
+Route::get("getSurveys", [GetSurveysController::class, "getSurveys"]);
+Route::get("logout", [LogoutController::class, "logout"]);
 Route::post("login", [LoginController::class, "login"]);
 Route::post("register", [RegisterController::class, "register"]);
-Route::get("logout", [LogoutController::class, "logout"]);
+Route::post("createSurvey", [CreateSurveyController::class, "createSurvey"]);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

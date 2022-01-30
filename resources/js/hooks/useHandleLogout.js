@@ -3,8 +3,8 @@ const useHandleLogout = async (setUser) => {
   const data = await response.json();
 
   console.log(data);
-
   setUser({ name: "", email: "" });
+  return;
 };
 
 export default useHandleLogout;
