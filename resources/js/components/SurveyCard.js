@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 
-const SurveyCard = ({ survey }) => {
+const SurveyCard = ({ survey, href }) => {
   const handleDateFormat = (date) => {
     const dateAux = new Date(date);
     return `${dateAux.getDate()}-${
@@ -14,7 +14,7 @@ const SurveyCard = ({ survey }) => {
 
   return (
     <div>
-      <Link to={"/"}>
+      <Link to={href}>
         <Button style={{margin: "15px 0px"}}>
           <Card
             sx={{
@@ -22,7 +22,7 @@ const SurveyCard = ({ survey }) => {
               diplay: "flex",
               alignItems: "center",
               justifyContent: "center",
-              background: "#eee"
+              background: "#fafafa"
             }}
           >
             <CardContent>

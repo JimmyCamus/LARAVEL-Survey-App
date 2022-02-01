@@ -21,7 +21,7 @@ const MySurveys = ({ user }) => {
     <div>
       {surveys.map((survey, index) => (
         <div key={index}>
-          <SurveyCard survey={survey} />
+          <SurveyCard survey={survey} href={`/statistics/${survey.id}`} />
         </div>
       ))}
     </div>

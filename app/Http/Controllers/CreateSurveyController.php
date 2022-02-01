@@ -12,7 +12,6 @@ class CreateSurveyController extends Controller
   public function CreateSurvey(Request $request)
   {
     try {
-
       $newSurvey = new Survey();
       $newSurvey->id = Survey::count() + 1;
       $newSurvey->user_id = Auth::user()->id;

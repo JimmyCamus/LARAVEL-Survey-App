@@ -32,3 +32,11 @@ Route::get("/createSurvey", function () {
 Route::get("/mySurveys", function () {
   return view('welcome');
 })->where('any', '.*');
+
+Route::get("/survey/{id}", function () {
+  return view('welcome');
+})->where('any', '.*');
+
+Route::get("/statistics/{id}", function () {
+  return view('welcome');
+})->where('any', '.*');

@@ -1,7 +1,9 @@
+import SurveyList from "../components/SurveysList";
+
 const LandingPage = ({ user }) => {
   return (
     <div>
-      <p>Hola</p>
+      <SurveyList />
     </div>
   );
 };
